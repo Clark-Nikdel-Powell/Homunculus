@@ -1,0 +1,15 @@
+
+@import 'mixins', 'reset', 'content';
+
+//  LAYOUT  //////////////////////////////////////////////////////
+
+$cntrminwidth: 880px;
+$cntrmaxwidth: 1200px;
+$cntrpad: 15px;
+
+.centered {
+	margin: 0 auto;
+	min-width: $cntrminwidth;
+	max-width: $cntrmaxwidth;
+	padding: 0 $cntrpad;
+}

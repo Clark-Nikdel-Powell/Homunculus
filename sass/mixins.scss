@@ -1,0 +1,64 @@
+
+$twitter: #2AB6E9;
+$facebook: #3B5998;
+$linkedin: #0A7AB3;
+$youtube: #BD2F29;
+$rss: #F79937;
+
+$tabletsm: 'max-width:1000px';
+$mobilelg: 'max-width:700px';
+$mobilesm: 'max-width:450px';
+
+@mixin linear-gradient($defaultcolor, $topcolor, $bottomcolor, $toppercent:0%, $bottompercent:100%) {
+	background: $defaultcolor;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop($toppercent, $topcolor), color-stop($bottompercent, $bottomcolor) );
+	background: -moz-linear-gradient(    top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -webkit-linear-gradient( top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -o-linear-gradient(      top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -ms-linear-gradient(     top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: linear-gradient(         top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${topcolor}, endColorstr=${bottomcolor},GradientType=0)");
+}
+@mixin glossy-gradient($defaultcolor, $color1, $color2, $color3, $color4) {
+	background: $defaultcolor;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(50%,$color2), color-stop(51%,$color3), color-stop(100%,$color4));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${color1}, endColorstr=${color4},GradientType=0 )");
+}
+@mixin cancel-gradient() {
+	background: transparent;
+	filter: none;
+}
+@mixin border-radius($v) {
+	-webkit-border-radius: $v;
+	-moz-border-radius:    $v;
+	border-radius:         $v;
+}
+@mixin box-sizing($v) {
+	-webkit-box-sizing: $v;
+	-moz-box-sizing:    $v;
+	-ms-box-sizing:     $v;
+	box-sizing:         $v;
+}
+@mixin box-shadow($v) {
+	-webkit-box-shadow: $v;
+	-moz-box-shadow:    $v;
+	box-shadow:         $v;
+}
+@mixin columns($c, $g) {
+	-webkit-column-count: $c;
+	-moz-column-count: $c;
+	column-count: $c;
+	-webkit-column-gap: $g;
+	-moz-column-gap: $g;
+	column-gap: $g;
+}
+@mixin transition($v) {
+	-webkit-transition: unquote($v);
+	-moz-transition: unquote($v);
+	transition: unquote($v);
+}
