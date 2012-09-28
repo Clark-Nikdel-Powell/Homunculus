@@ -10,8 +10,14 @@ $linkhovercolor: $red;
 /* ======================================================== CONTENT STYLES */
 
 a {
-	color:$linkcolor; text-decoration:none;
-	&:hover {color:$linkhovercolor;}
+	color: $linkcolor;
+	text-decoration: none;
+	@include transition('color 0.3s, background-color 0.3s, border-color 0.3s');
+	
+	&:hover {
+		color: $linkhovercolor;
+		@include transition('color 0s, background-color 0s, border-color 0s');
+	}
 }
 .ctst {
 	&, input, textarea, select {color:#555;}

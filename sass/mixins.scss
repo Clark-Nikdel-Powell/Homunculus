@@ -62,3 +62,13 @@ $mobilesm: 'max-width:450px';
 	-moz-transition: unquote($v);
 	transition: unquote($v);
 }
+@mixin transform($v) {
+	-webkit-transform: unquote($v);
+	-moz-transform: unquote($v);
+	transform: unquote($v);
+}
+@mixin rgbabg($c, $o, $f:$c) {
+	background-color: $f;
+	background-color: rgba($c, $o);
+	*background-color: $f;
+}

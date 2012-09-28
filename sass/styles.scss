@@ -3,8 +3,8 @@
 
 //  LAYOUT  //////////////////////////////////////////////////////
 
-$cntrminwidth: 880px;
-$cntrmaxwidth: 1200px;
+$cntrminwidth: 800px;
+$cntrmaxwidth: 1150px;
 $cntrpad: 15px;
 
 .centered {
@@ -12,4 +12,25 @@ $cntrpad: 15px;
 	min-width: $cntrminwidth;
 	max-width: $cntrmaxwidth;
 	padding: 0 $cntrpad;
+}
+
+//  HEADER  ////////////////////////////////////////////////////////////////
+
+#logo {
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-image: url(images/logo.png);
+		background-position: 50%;
+		text-indent: -9999px;
+	}
+}
+
+//  HIDPI SCREENS  ////////////////////////////////////////////////////////////////
+
+@media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (-moz-min-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2) {
+
+#logo a {background-image:url(images/logo@2x.png); background-size: 200px 100px;}
+
 }
