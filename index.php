@@ -37,6 +37,6 @@ get_template_part('layout','beforeinterior');
 </div><!-- content -->
 
 <?
-get_template_part('layout','beforeinterior');
+get_template_part('layout','afterinterior');
 get_footer();
 ?>

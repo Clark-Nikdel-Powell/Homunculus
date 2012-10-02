@@ -1,3 +1,4 @@
+<? $ancestor = highest_ancestor(); ?>
 <div id="sidebar" class="ctst">
 
 	<?

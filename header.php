@@ -15,7 +15,7 @@
 		if ( is_home() && get_bloginfo('description') ) { print " &rsaquo; "; bloginfo('description'); }
 	?></title>
 
-	<link href="<?=WP_THEME_URL?>/styles.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="<?=WP_THEME_URL?>/style.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<?=WP_THEME_URL?>/print.css" rel="stylesheet" type="text/css" media="print" />
 	<link href="<?=WP_THEME_URL?>/favicon.png" rel="icon" />
 	<link rel="alternate" type="application/rss+xml" title="<? bloginfo('name'); ?>" href="<? bloginfo('rss2_url'); ?>" />
