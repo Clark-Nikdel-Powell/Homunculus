@@ -60,11 +60,6 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 	h1, h2, h3, h4, h5, h6	{page-break-after:avoid;}
 	h1, h2, h3, h4, h5, h6, p, ul, ol {orphans:3; widows:3;}
 	img {max-width:100% !important; page-break-inside:avoid;}
-	a[href]:after {content:" (" attr(href) ")";}
-	a[href^="javascript:"]:after, a[href^="#"]:after {content:"";}
-}
-@media ($tabletsm) {
-	a {word-wrap:break-word;}
 }
 
 .tabletsm, .mobile, .mobilelg, .mobilesm {display:none;}
@@ -77,6 +72,7 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 @media ($mobilelg) {
 	.tabletsm, .tablet {display:none;}
 	.mobilelg, .mobile {display:block;}
+	a {word-wrap:break-word;}
 }
 @media ($mobilesm) {
 	.mobilelg {display:none;}
