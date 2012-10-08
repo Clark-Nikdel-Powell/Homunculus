@@ -34,6 +34,26 @@ $cntrpad: 15px;
 	}
 }
 
+//  SUBNAV  ////////////////////////////////////////////////////////////////
+
+#subnav {
+	li {padding:0;}
+	a {
+		display: block;
+	}
+	ul ul {
+		display: none;
+		
+		a {font-size:0.85em;}
+	}
+	.current_page_item, .current_page_ancestor {
+		ul {display:block;}
+	}
+	.current_page_item > a {
+		
+	}
+}
+
 //  MOBILE  ////////////////////////////////////////////////////////////////
 
 /* ONLY USE THIS IF YOU HAVE A LOT OF DIFFERENCES BETWEEN DESKTOP AND TABLET. OTHERWISE, ADD TABLET STYLES INLINE
