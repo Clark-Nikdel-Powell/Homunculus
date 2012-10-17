@@ -38,5 +38,6 @@ get_template_part('layout','beforeinterior');
 
 <?
 get_template_part('layout','afterinterior');
+get_sidebar();
 get_footer();
 ?>
