@@ -15,6 +15,7 @@ $cntrmaxwidth: 1150px;
 $cntrpad: 15px;
 
 .centered {
+	position: relative;
 	margin: 0 auto;
 	min-width: $cntrminwidth;
 	max-width: $cntrmaxwidth;

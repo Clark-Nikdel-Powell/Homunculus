@@ -35,11 +35,11 @@
 	
 	<?
 	wp_nav_menu(array(
-		'menu'        => 'Main Menu'
-	,	'container'   => 'nav'
-	//,	'container_id' => ''
-	,	'depth'       => 1
-	,	'fallback_cb' => false
+		'menu'         => 'Main Menu'
+	,	'container'    => 'nav'
+	,	'container_id' => 'mainmenu'
+	,	'depth'        => 1
+	,	'fallback_cb'  => false
 	));
 	?>
 	

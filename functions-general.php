@@ -70,9 +70,10 @@ function modify_contact_info($fields) {
 	unset($fields['aim']);
 	unset($fields['yim']);
 	unset($fields['jabber']);
-	//$fields['twitter'] = 'Twitter';
-	//$fields['facebook'] = 'Facebook';
-	//$fields['linkedin'] = 'LinkedIn';
+	$fields['twitter'] = 'Twitter';
+	$fields['linkedin'] = 'LinkedIn';
+	$fields['googleplus'] = 'Google+';
+	$fields['facebook'] = 'Facebook';
 	return $fields;
 } // modify_contact_info()
 
