@@ -27,7 +27,6 @@
 </head>
 
 <body <? body_class(); ?>>
-<div id="whole">
 
 <header>
 	
@@ -37,7 +36,7 @@
 	wp_nav_menu(array(
 		'menu'         => 'Main Menu'
 	,	'container'    => 'nav'
-	,	'container_id' => 'mainmenu'
+	,	'container_id' => 'site'
 	,	'depth'        => 1
 	,	'fallback_cb'  => false
 	));

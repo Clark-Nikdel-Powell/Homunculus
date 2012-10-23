@@ -90,6 +90,51 @@ add_filter( 'show_admin_bar', '__return_false' );
 /*
 ===============================================================================
 
+  Site's Social Media Info
+
+===============================================================================
+*/
+
+add_action('admin_init', 'social_info');
+function social_info() {
+	
+	add_settings_section( 'GENERAL_social', 'Social Media Info', 'GENERAL_social_callback', 'general' );
+	
+	add_settings_field( 'facebook_url', 'Facebook URL', 'facebook_callback', 'general', 'GENERAL_social' );
+	add_settings_field( 'twitter_handle', 'Twitter Handle', 'twitter_callback', 'general', 'GENERAL_social' );
+	add_settings_field( 'youtube_url', 'YouTube URL', 'youtube_callback', 'general', 'GENERAL_social' );
+	add_settings_field( 'flickr_url', 'Flickr URL', 'flickr_callback', 'general', 'GENERAL_social' );
+	add_settings_field( 'rss_url', 'RSS URL', 'rss_callback', 'general', 'GENERAL_social' );
+	
+	register_setting( 'general', 'facebook_url' );
+	register_setting( 'general', 'twitter_handle' );
+	register_setting( 'general', 'youtube_url' );
+	register_setting( 'general', 'flickr_url' );
+	register_setting( 'general', 'rss_url' );
+	
+} // social_info()
+
+function GENERAL_social_callback() { echo ''; }
+
+function facebook_callback($args) {
+	echo '<input type="text" id="facebook_url" name="facebook_url" value="'.get_option('facebook_url').'" style="width:70%" />';
+}
+function twitter_callback($args) {
+	echo '@<input type="text" id="twitter_handle" name="twitter_handle" value="'.get_option('twitter_handle').'" style="width:70%" />';
+}
+function youtube_callback($args) {
+	echo '<input type="text" id="youtube_url" name="youtube_url" value="'.get_option('youtube_url').'" style="width:70%" />';
+}
+function flickr_callback($args) {
+	echo '<input type="text" id="flickr_url" name="flickr_url" value="'.get_option('flickr_url').'" style="width:70%" />';
+}
+function rss_callback($args) {
+	echo '<input type="text" id="rss_url" name="rss_url" value="'.get_option('rss_url').'" style="width:70%" /><p class="description">Default &rarr; '.get_bloginfo('rss2_url').'</p>';
+}
+
+/*
+===============================================================================
+
   Modify the visual editor
 
 ===============================================================================

@@ -1,7 +1,36 @@
-<?
-get_header();
-get_template_part('layout','beforehome');
-?>
+<? get_header(); ?>
+
+<div id="slideshow">
+	
+	<div id="slides">
+	<div class="slide">
+		
+		<img src="http://placekitten.com/400/400">
+		<h1>Title of Slide</h1>
+		
+	</div><!-- slide -->
+	<div class="slide">
+		
+		<img src="http://placekitten.com/400/400">
+		<h1>Title of Slide</h1>
+		
+	</div><!-- slide -->
+	</div><!-- slides -->
+	
+	<nav id="slide-stepper">
+		<a href="#" class="prev">Previous</a>
+		<a href="#" class="next">Next</a>
+	</nav>
+	
+	<nav id="slide-counter">
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+	</nav>
+	
+</div><!-- slideshow -->
 
 <div id="content" class="ctst">
 
@@ -27,7 +56,4 @@ get_template_part('layout','beforehome');
 
 </div><!-- content -->
 
-<?
-get_template_part('layout','afterhome');
-get_footer();
-?>
+<? get_footer(); ?>
