@@ -1,2 +1,5 @@
 @import 'mixins', 'reset', 'content';
-body { @extend .ctst; }
+body {
+	font-size: 16px;
+	@extend .ctst;
+}

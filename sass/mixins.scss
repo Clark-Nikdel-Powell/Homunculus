@@ -1,13 +1,19 @@
 
+//  COLORS  ////////////////////////////////////////////////////////////////
+
 $twitter: #2AB6E9;
 $facebook: #3B5998;
 $linkedin: #0A7AB3;
 $youtube: #BD2F29;
 $rss: #F79937;
 
+//  BREAK POINTS  ////////////////////////////////////////////////////////////////
+
 $tabletsm: 'max-width:1000px';
 $mobilelg: 'max-width:700px';
 $mobilesm: 'max-width:450px';
+
+//  BROWSER PREFIXES  ////////////////////////////////////////////////////////////////
 
 @mixin linear-gradient($defaultcolor, $topcolor, $bottomcolor, $toppercent:0%, $bottompercent:100%) {
 	background: $defaultcolor;
@@ -71,4 +77,15 @@ $mobilesm: 'max-width:450px';
 	background-color: $f;
 	background-color: rgba($c, $o);
 	*background-color: $f;
+}
+
+//  EXTEND BLOCKS  ////////////////////////////////////////////////////////////////
+
+%pseudo_triangle {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	border: solid 10px transparent;
 }
