@@ -14,15 +14,18 @@ $linkhovercolor: $red;
 
 //  CONTENT STYLES  ////////////////////////////////////////////////////////////////
 
+a, input[type=submit] {
+	@include transition('color 0.3s, background-color 0.3s, border-color 0.3s');
+	
+	&:hover { @include transition('color 0s, background-color 0s, border-color 0s');}
+}
 a {
 	color: $linkcolor;
 	text-decoration: none;
-	@include transition('color 0.3s, background-color 0.3s, border-color 0.3s');
 	
 	img {opacity:.9;}
 	&:hover {
 		color: $linkhovercolor;
-		@include transition('color 0s, background-color 0s, border-color 0s');
 		
 		img {opacity:1;}
 	}

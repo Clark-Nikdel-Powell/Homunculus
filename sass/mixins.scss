@@ -62,6 +62,12 @@ $mobilesm: 'max-width:450px';
 	-webkit-column-gap: $g;
 	-moz-column-gap: $g;
 	column-gap: $g;
+	
+	p, ul, ol, table {
+		-webkit-column-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		column-break-inside: avoid;
+	}
 }
 @mixin transition($v) {
 	-webkit-transition: unquote($v);
@@ -72,6 +78,11 @@ $mobilesm: 'max-width:450px';
 	-webkit-transform: unquote($v);
 	-moz-transform: unquote($v);
 	transform: unquote($v);
+}
+@mixin transform-origin($v) {
+	-webkit-transform-origin: unquote($v);
+	-moz-transform-origin: unquote($v);
+	transform-origin: unquote($v);
 }
 @mixin rgbabg($c, $o, $f:$c) {
 	background-color: $f;
@@ -88,4 +99,9 @@ $mobilesm: 'max-width:450px';
 	height: 0;
 	position: absolute;
 	border: solid 10px transparent;
+}
+%inlineblock {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
 }
