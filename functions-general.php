@@ -436,8 +436,11 @@ function pagination($prev='&larr; Previous', $next='Next &rarr;') {
 		$pagination['add_args'] = array( 's' => get_query_var( 's' ) );
 	endif;
 	
-	echo '<p id="pagination">'.paginate_links($pagination).'</p>';
-	
+	$links = paginate_links($pagination);
+	echo $links
+		? '<p id="pagination">'.$links.'</p>'
+		: '';
+		
 } // pagination()
 
 /*
