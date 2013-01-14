@@ -61,7 +61,7 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 	.pagebreak {page-break-before:always;}
 	h1, h2, h3, h4, h5, h6	{page-break-after:avoid;}
 	h1, h2, h3, h4, h5, h6, p, ul, ol {orphans:3; widows:3;}
-	img {max-width:100% !important; height:auto; page-break-inside:avoid;}
+	img {max-width:100% !important; page-break-inside:avoid;}
 }
 
 .tabletsm, .mobile, .mobilelg, .mobilesm {display:none;}
