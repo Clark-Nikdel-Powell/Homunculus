@@ -1,7 +1,7 @@
 /*!
-Theme Name:    THEME NAME
-Theme URI:     http://CLIENTURL.COM
-Description:   A custom theme built by <a href='http://www.clarknikdelpowell.com'>Clark/Nikdel/Powell Inc.</a> for CLIENT NAME
+Theme Name:    COMPANY NAME
+Theme URI:     http://COMPANYWEBSITE.COM
+Description:   A custom theme built by <a href='http://www.clarknikdelpowell.com'>Clark/Nikdel/Powell Inc.</a> for COMPANY NAME
 Author:        YOUR NAME
 Author URI:    http://clarknikdelpowell.com
 */
@@ -10,9 +10,9 @@ Author URI:    http://clarknikdelpowell.com
 
 //  LAYOUT  //////////////////////////////////////////////////////
 
-$cntrminwidth: 800px;
+$cntrminwidth: 750px;
 $cntrmaxwidth: 1150px;
-$cntrpad: 15px;
+$cntrpad: 20px;
 
 .centered {
 	position: relative;
@@ -21,10 +21,17 @@ $cntrpad: 15px;
 	max-width: $cntrmaxwidth;
 	padding: 0 $cntrpad;
 }
+$iconsprite: '.iconsprite';
+#{$iconsprite} {background-image: url(images/sprite.png);}
 
 //  HEADER  ////////////////////////////////////////////////////////////////
 
+header.site {
+}
 #logo {
+	width: 200px;
+	height: 100px;
+	
 	a {
 		display: block;
 		width: 100%;
@@ -38,21 +45,27 @@ $cntrpad: 15px;
 //  SUBNAV  ////////////////////////////////////////////////////////////////
 
 #subnav {
-	li {padding:0;}
+	ul {
+		@extend .nobullets;
+	}
+	li {
+		padding: 0;
+	}
 	a {
 		display: block;
 	}
 	ul ul {
 		display: none;
-		
-		a {font-size:0.85em;}
 	}
 	.current_page_item, .current_page_ancestor {
 		ul {display:block;}
 	}
-	.current_page_item > a {
-		
-	}
+	.current_page_item > a {}
+}
+
+//  FOOTER  ////////////////////////////////////////////////////////////////
+
+footer.site {
 }
 
 //  HIDPI SCREENS  ////////////////////////////////////////////////////////////////
@@ -60,12 +73,10 @@ $cntrpad: 15px;
 @media only screen and (-webkit-min-device-pixel-ratio:2), only screen and (-moz-min-device-pixel-ratio:2), only screen and (-o-min-device-pixel-ratio:2/1), only screen and (min-device-pixel-ratio:2) {
 
 #logo a {background-image:url(images/logo@2x.png); background-size: 200px 100px;}
+#{$iconsprite} {background-image: url(images/sprite@2x.png); background-size: 200px 50px;}
 
 }
 
-//  MOBILE  ////////////////////////////////////////////////////////////////
+//  RESPONSIVE  ////////////////////////////////////////////////////////////////
 
-/* ONLY USE THIS IF YOU HAVE A LOT OF DIFFERENCES BETWEEN DESKTOP AND TABLET. OTHERWISE, ADD TABLET STYLES INLINE
-@media ($tabletlg) { @import 'tablet'; }
-*/
-@media ($mobilelg) { @import 'mobile'; }
+@import 'responsive';

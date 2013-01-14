@@ -42,6 +42,7 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 .tcell {display:table-cell; vertical-align:middle; *display:inline; *zoom:1;}
 .fillercell {width:100%;}
 .screen-reader-text {display:none;}
+%font-smoothing {-webkit-font-smoothing: antialiased;}
 
 .loggedinhide, .logged-in .loggedinshow {display:block;}
 .loggedinshow, .logged-in .loggedinhide {display:none;}
