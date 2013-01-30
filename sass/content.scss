@@ -3,11 +3,12 @@
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
-%custom-serif {font-family: 'Droid Serif', serif;}
-%custom-sans {font-family: 'Droid Sans', sans-serif;}
+%font-header {font-family: 'Droid Serif', serif;}
+%font-copy {font-family: 'Droid Sans', sans-serif;}
 
 $blue: blue;
 $red: red;
+$copycolor: #555;
 
 $linkcolor: $blue;
 $linkhovercolor: $red;
@@ -33,7 +34,7 @@ a {
 .ctst {
 	font-size: 1.15em;
 	
-	&, input, textarea, select {color:$grey;}
+	&, input, textarea, select {color:$copycolor;}
 	h1, h2, h3, h4, h5, h6 {
 		padding-top: 1.2em;
 		line-height: 1.1em;

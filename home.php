@@ -32,7 +32,7 @@
 	
 </div><!-- slideshow -->
 
-<div id="content" class="ctst">
+<div class="content ctst">
 
 	<?
 	$catid = get_cat_id('news');

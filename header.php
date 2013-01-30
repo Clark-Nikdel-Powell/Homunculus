@@ -28,7 +28,7 @@
 
 <body <? body_class(); ?>>
 
-<header>
+<header class="site">
 	
 	<h1 id="logo"><a href="/">CLIENT NAME</a></h1>
 	
@@ -44,4 +44,4 @@
 	
 </header>
 
-<div id="main">
+<div class="main">

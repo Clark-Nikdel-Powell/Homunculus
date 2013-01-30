@@ -1,6 +1,6 @@
 </div><!-- main -->
 
-<footer>
+<footer class="site">
 </footer>
 
 <?

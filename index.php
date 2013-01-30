@@ -3,7 +3,7 @@ get_header();
 get_template_part('layout','beforeinterior');
 ?>
 
-<div id="content" class="ctst">
+<div class="content ctst">
 
 <? if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
