@@ -1,4 +1,11 @@
 
+%maintainfloat {overflow: hidden;}
+%table {display:table; width:100%;}
+%trow {display:table-row;}
+%tcell {display:table-cell; vertical-align:middle; *display:inline; *zoom:1;}
+%font-smoothing {-webkit-font-smoothing: antialiased;}
+%nowrap {white-space:nowrap;}
+
 *, *:before, *:after {margin:0px; padding:0px; outline:0; border:0px; background-repeat:no-repeat; @include box-sizing(border-box);}
 html {-webkit-overflow-scrolling:touch; -webkit-tap-highlight-color:rgba(0,0,0,0.3); -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
 body, input, textarea, select {font-size:14px; font-family:Arial, sans-serif;}
@@ -35,14 +42,13 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 .textcenter {text-align:center;}
 .textright {text-align:right;}
 .noborder {border:0;}
-.nowrap {white-space:nowrap;}
+.nowrap {@extend %nowrap;}
 .linethrough {text-decoration:line-through;}
-.table {display:table; width:100%;}
-.trow {display:table-row;}
-.tcell {display:table-cell; vertical-align:middle; *display:inline; *zoom:1;}
+.table {@extend %table;}
+.trow {@extend %trow;}
+.tcell {@extend %tcell;}
 .fillercell {width:100%;}
 .screen-reader-text {display:none;}
-%font-smoothing {-webkit-font-smoothing: antialiased;}
 
 .loggedinhide, .logged-in .loggedinshow {display:block;}
 .loggedinshow, .logged-in .loggedinhide {display:none;}
@@ -65,19 +71,18 @@ img.wp-smiley {display:inline; vertical-align:middle;}
 	img {max-width:100% !important; height:auto; page-break-inside:avoid;}
 }
 
-.tabletsm, .mobile, .mobilelg, .mobilesm {display:none;}
-.desktop, .tablet {display:block;}
+.tabletsm-show, .mobile-show, .mobilelg-show, .mobilesm-show {display:none;}
 
 @media ($tabletsm) {
-	.desktop {display:none;}
-	.tablet, .tabletsm {display:block;}
+	.desktop-show, .tablet-hide {display:none !important;}
+	.tablet-show, .tabletsm-show {display:inherit;}
 }
 @media ($mobilelg) {
-	.tabletsm, .tablet {display:none;}
-	.mobilelg, .mobile {display:block;}
+	.tabletsm-show, .tablet-show, .mobile-hide {display:none !important;}
+	.mobilelg-show, .mobile-show {display:inherit;}
 	a {word-wrap:break-word;}
 }
 @media ($mobilesm) {
-	.mobilelg {display:none;}
-	.mobilesm, .mobile {display:block;}
+	.mobilelg-show {display:none !important;}
+	.mobilesm-show, .mobile-show {display:inherit;}
 }
