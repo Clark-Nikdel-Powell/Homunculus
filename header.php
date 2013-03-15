@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<!--[if IE 7]>    <html class="ie ie7 lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 
 <head>
 

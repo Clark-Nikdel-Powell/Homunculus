@@ -1,0 +1,370 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+/*
+@mixin linear-gradient($defaultcolor, $topcolor, $bottomcolor, $toppercent:0%, $bottompercent:100%) {
+	background: $defaultcolor;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop($toppercent, $topcolor), color-stop($bottompercent, $bottomcolor) );
+	background: -moz-linear-gradient(    top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -webkit-linear-gradient( top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -o-linear-gradient(      top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -ms-linear-gradient(     top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: linear-gradient(         top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${topcolor}, endColorstr=${bottomcolor},GradientType=0)");
+}
+@mixin horizontal-gradient($defaultcolor, $topcolor, $bottomcolor, $toppercent:0%, $bottompercent:100%) {
+	background: $defaultcolor;
+	background: -webkit-gradient( linear, left top, right top, color-stop($toppercent, $topcolor), color-stop($bottompercent, $bottomcolor) );
+	background: -moz-linear-gradient(    left, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -webkit-linear-gradient( left, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -o-linear-gradient(      left, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -ms-linear-gradient(     left, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: linear-gradient(         to right, $topcolor $toppercent, $bottomcolor $bottompercent );
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${topcolor}, endColorstr=${bottomcolor},GradientType=1)");
+}
+@mixin glossy-gradient($defaultcolor, $color1, $color2, $color3, $color4) {
+	background: $defaultcolor;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 50%, $color3 51%, $color4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(50%,$color2), color-stop(51%,$color3), color-stop(100%,$color4));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	background: linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
+	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${color1}, endColorstr=${color4},GradientType=0 )");
+}
+*/
+*, *:before, *:after {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  border: 0px;
+  background-repeat: no-repeat;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body, input, textarea, select {
+  font-size: 14px;
+  font-family: Arial, sans-serif; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+header, footer {
+  cursor: default; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ul, ol {
+  list-style-type: none; }
+
+table {
+  border-collapse: collapse; }
+
+th, td {
+  vertical-align: baseline; }
+
+th {
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+sup, sub {
+  line-height: 1em; }
+
+img {
+  display: block; }
+
+input {
+  *line-height: 1em;
+  overflow: visible;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+input[type=submit], input[type=button] {
+  cursor: pointer;
+  background-color: transparent; }
+
+input[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border: none; }
+
+textarea {
+  resize: vertical; }
+
+table.valignmiddle td {
+  vertical-align: middle; }
+
+img[align=left], .alignleft {
+  margin: 0.5em 2em 1em 0; }
+
+img[align=right], .alignright {
+  margin: 0.5em 0 1em 2em; }
+
+img.wp-smiley {
+  display: inline;
+  vertical-align: middle; }
+
+.hidetext {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+.floatleft, .alignleft {
+  float: left; }
+
+.floatright, .alignright {
+  float: right; }
+
+.selfclear {
+  overflow: hidden; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
+
+.clearfloat {
+  float: none;
+  display: block;
+  clear: both;
+  height: 0; }
+
+.textleft {
+  text-align: left; }
+
+.textcenter {
+  text-align: center; }
+
+.textright {
+  text-align: right; }
+
+.noborder {
+  border: 0; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.linethrough {
+  text-decoration: line-through; }
+
+.table {
+  display: table;
+  width: 100%; }
+
+.trow {
+  display: table-row; }
+
+.tcell {
+  display: table-cell;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1; }
+
+.fillercell {
+  width: 100%; }
+
+.screen-reader-text {
+  display: none; }
+
+.loggedinhide, .logged-in .loggedinshow {
+  display: block; }
+
+.loggedinshow, .logged-in .loggedinhide {
+  display: none; }
+
+@media screen {
+  .forprint {
+    display: none; } }
+@media print {
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  .noprint {
+    display: none; }
+
+  .pagebreak {
+    page-break-before: always; }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid; }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    orphans: 3;
+    widows: 3; }
+
+  img {
+    max-width: 100% !important;
+    height: auto;
+    page-break-inside: avoid; } }
+.tabletsm, .mobile, .mobilelg, .mobilesm {
+  display: none; }
+
+.desktop, .tablet {
+  display: block; }
+
+@media (max-width: 1000px) {
+  .desktop {
+    display: none; }
+
+  .tablet, .tabletsm {
+    display: block; } }
+@media (max-width: 700px) {
+  .tabletsm, .tablet {
+    display: none; }
+
+  .mobilelg, .mobile {
+    display: block; }
+
+  a {
+    word-wrap: break-word; } }
+@media (max-width: 450px) {
+  .mobilelg {
+    display: none; }
+
+  .mobilesm, .mobile {
+    display: block; } }
+.ctst h1, body h1, .ctst h2, body h2, .ctst h3, body h3, .ctst h4, body h4, .ctst h5, body h5, .ctst h6, body h6 {
+  font-family: "Droid Serif", serif; }
+
+a, input[type=submit] {
+  -webkit-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  -moz-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s; }
+  a:hover, input[type=submit]:hover {
+    -webkit-transition: color 0s, background-color 0s, border-color 0s;
+    -moz-transition: color 0s, background-color 0s, border-color 0s;
+    transition: color 0s, background-color 0s, border-color 0s; }
+
+a {
+  color: blue;
+  text-decoration: none; }
+  a img {
+    opacity: .95; }
+  a:hover {
+    color: red; }
+    a:hover img {
+      opacity: 1; }
+
+.ctst, body {
+  font-size: 1.15em; }
+  .ctst, body, .ctst input, body input, .ctst textarea, body textarea, .ctst select, body select {
+    color: #555; }
+  .ctst h1, body h1, .ctst h2, body h2, .ctst h3, body h3, .ctst h4, body h4, .ctst h5, body h5, .ctst h6, body h6 {
+    padding-top: 1.2em;
+    line-height: 1.1em;
+    cursor: default; }
+  .ctst h1, body h1 {
+    font-size: 2.5em; }
+  .ctst h2, body h2 {
+    font-size: 1.8em;
+    margin-bottom: -1px; }
+  .ctst h3, body h3 {
+    font-size: 1.4em;
+    margin-bottom: -2px; }
+  .ctst h4, body h4 {
+    font-size: 1.2em;
+    margin-bottom: -3px; }
+  .ctst h5, body h5 {
+    font-size: 1em;
+    margin-bottom: -4px; }
+  .ctst h6, body h6 {
+    font-size: 1em;
+    margin-bottom: -5px; }
+  .ctst p, body p, .ctst ul, body ul, .ctst ol, body ol, .ctst table, body table {
+    line-height: 1.8em;
+    margin-top: 1.2em; }
+  .ctst ul, body ul, .ctst ol, body ol {
+    margin-left: 2em; }
+  .ctst ul, body ul {
+    list-style: disc; }
+  .ctst ol, body ol {
+    list-style: decimal; }
+  .ctst ul ul, body ul ul, .ctst ul ol, body ul ol, .ctst ol ul, body ol ul, .ctst ol ol, body ol ol {
+    margin-top: 0; }
+  .ctst li, body li {
+    padding: 2px 0; }
+  .ctst table, body table {
+    line-height: 1.6em; }
+  .ctst th, body th, .ctst td, body td {
+    padding: 0.5em;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+    *border-bottom: solid 1px #d4d4d4; }
+  .ctst th, body th {
+    border-bottom-width: 2px; }
+  .ctst .noborder th, body .noborder th, .ctst .noborder td, body .noborder td {
+    border: 0; }
+  .ctst table.layoutonly, body table.layoutonly {
+    width: 100%; }
+    .ctst table.layoutonly th, body table.layoutonly th, .ctst table.layoutonly td, body table.layoutonly td {
+      padding: 0;
+      border: 0;
+      vertical-align: top; }
+  .ctst form, body form {
+    padding-top: 0.6em; }
+    .ctst form p, body form p, .ctst form ul, body form ul, .ctst form ol, body form ol, .ctst form table, body form table {
+      margin-top: 0.7em;
+      line-height: 1.7em; }
+  .ctst label, body label {
+    display: inline-block;
+    padding-left: 0.2em;
+    font-weight: bold; }
+  .ctst input, body input, .ctst textarea, body textarea, .ctst select, body select {
+    padding: 0.3em;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    width: 100%; }
+  .ctst textarea, body textarea {
+    line-height: 1.4em;
+    padding: 0.5em 0.7em; }
+  .ctst input[type=radio], body input[type=radio], .ctst input[type=checkbox], body input[type=checkbox] {
+    padding: 0;
+    width: auto; }
+  .ctst input[type=submit], body input[type=submit], .ctst a.button, body a.button {
+    display: inline-block;
+    width: auto;
+    background-color: blue;
+    border-color: blue;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.3em 0.9em;
+    line-height: 1em; }
+    .ctst input[type=submit]:hover, body input[type=submit]:hover, .ctst a.button:hover, body a.button:hover {
+      background-color: red;
+      border-color: red; }
+    .ctst input[type=submit]:active, body input[type=submit]:active, .ctst a.button:active, body a.button:active {
+      background-color: #e60000;
+      border-color: #e60000; }
+  .home .ctst, .home body, .ctst #sidebar, body #sidebar {
+    font-size: 1em; }
+    .home .ctst p, .home body p, .home .ctst ul, .home body ul, .home .ctst ol, .home body ol, .home .ctst table, .home body table, .ctst #sidebar p, body #sidebar p, .ctst #sidebar ul, body #sidebar ul, .ctst #sidebar ol, body #sidebar ol, .ctst #sidebar table, body #sidebar table {
+      line-height: 1.6em; }
+
+.ctst ul.nobullets, body ul.nobullets, .ctst ol.nobullets, body ol.nobullets {
+  list-style: none;
+  margin-left: 0; }
+
+body {
+  font-size: 16px; }

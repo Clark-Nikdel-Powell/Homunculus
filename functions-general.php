@@ -87,6 +87,13 @@ function modify_footer_admin() {
 // Remove admin bar on front-facing site
 add_filter( 'show_admin_bar', '__return_false' );
 
+// Add favicon to admin pages
+function pa_admin_area_favicon() {
+$favicon_url = get_bloginfo('template_directory') . '/favicon.png';
+echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+}
+add_action('admin_head', 'pa_admin_area_favicon');
+
 /*
 ===============================================================================
 

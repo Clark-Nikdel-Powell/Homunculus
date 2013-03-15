@@ -16,6 +16,7 @@ $mobilesm: 'max-width:450px';
 
 //  BROWSER PREFIXES  ////////////////////////////////////////////////////////////////
 
+<<<<<<< HEAD
 @mixin linear-gradient($d, $g) {
 	background: $d;
 	background: -moz-linear-gradient(unquote($g));
@@ -23,6 +24,17 @@ $mobilesm: 'max-width:450px';
 	background: -o-linear-gradient(unquote($g));
 	background: -ms-linear-gradient(unquote($g));
 	background: linear-gradient(unquote($g));
+=======
+/*
+@mixin linear-gradient($defaultcolor, $topcolor, $bottomcolor, $toppercent:0%, $bottompercent:100%) {
+	background: $defaultcolor;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop($toppercent, $topcolor), color-stop($bottompercent, $bottomcolor) );
+	background: -moz-linear-gradient(    top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -webkit-linear-gradient( top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -o-linear-gradient(      top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: -ms-linear-gradient(     top, $topcolor $toppercent, $bottomcolor $bottompercent );
+	background: linear-gradient(         top, $topcolor $toppercent, $bottomcolor $bottompercent );
+>>>>>>> General Update
 	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${topcolor}, endColorstr=${bottomcolor},GradientType=0)");
 }
 <<<<<<< HEAD
@@ -47,7 +59,11 @@ $mobilesm: 'max-width:450px';
 	background: linear-gradient(top, $color1 0%,$color2 50%,$color3 51%,$color4 100%);
 	filter: e("progid:DXImageTransform.Microsoft.gradient( startColorstr=${color1}, endColorstr=${color4},GradientType=0 )");
 }
+<<<<<<< HEAD
 >>>>>>> Added a horizontal gradient mixin that's just gonna be overwritten, but whatevs.
+=======
+*/
+>>>>>>> General Update
 @mixin cancel-gradient() {
 	background: transparent;
 	filter: none;
