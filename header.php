@@ -24,9 +24,9 @@
 	
 	<? wp_head(); ?>
 </head>
-<body itemscope itemtype="http://schema.org/WebPage" <? body_class(); ?>>
+<body <? cnp_schema_type('WebPage'); ?> <? body_class(); ?>>
 
-<header class="site" itemscope itemtype="http://schema.org/WPHeader" role="banner">
+<header class="site" <? cnp_schema_type('WPHeader'); ?> role="banner">
 	
 	<h1 class="logo"><a href="<?=home_url()?>"><? bloginfo('name'); ?></a></h1>
 	
