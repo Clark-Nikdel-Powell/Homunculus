@@ -3,8 +3,6 @@ require_once('functions-general.php');
 
 //  ADD THEME FANCYNESS  ///////////////////////////////////////////////////////
 
-add_theme_support('menus');
-add_theme_support('post-thumbnails');
 //add_image_size('name', 800, 600, $crop[bool]);
 
 /*
