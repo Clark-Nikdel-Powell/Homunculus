@@ -9,9 +9,9 @@
 
 	<title><? wp_title('&lsaquo;', true, 'right'); ?></title>
 
-	<meta name="viewport"    content="width=device-width">
+	<meta name="viewport"    content="width=device-width,initial-scale=1,maximum-scale=1">
 	<meta name="author"      content="Clark/Nikdel/Powell">
-	<meta name="description" content="<? do_action('cnp_description'); ?>">
+	<meta name="description" content="<?= cnp_description(); ?>">
 
 	<link rel="stylesheet" href="<?=cnp_theme_url('style.css');?>" media="screen">
 	<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('ie.css');?>" media="screen"><![endif]-->
