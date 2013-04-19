@@ -216,39 +216,21 @@ add_filter('body_class', 'new_body_classes');
 function new_body_classes($classes) {
 
 	global $wp_query;
-	if (is_single()) :
-
-		$wp_query->post = $wp_query->posts[0];
-		setup_postdata($wp_query->post);
-		$classes[] = $wp_query->post->post_name;
-		foreach((array) get_the_category() as $cat) :
-			if (!empty($cat->slug)) :
-				$classes[] = sanitize_html_class($cat->slug, $cat->cat_ID);
-			endif;
-			while ($cat->parent) :
-				$cat = &get_category((int) $cat->parent);
-				if (!empty($cat->slug))
-					$classes[] = sanitize_html_class($cat->slug, $cat->cat_ID);
-			endwhile;
-		endforeach;
+	if (is_singular()) :
 		
-	elseif (is_archive()) :
-	
-		$archive = $wp_query->get_queried_object();
-		$classes[] = $archive->slug;
-		while ($archive->parent != 0) :
-			$archive = get_category($archive->parent);
-			$classes[] = $archive->slug;
-		endwhile;
-
-	elseif (is_page()) :
-
-		$wp_query->post = $wp_query->posts[0];
-		setup_postdata($wp_query->post);
+		// All terms of all taxonomies
+		$terms = get_the_terms($wp_query->post->ID, get_taxonomies());
+		//print_r($terms);
+		foreach ($terms as $term) {
+			$classes[] = $term->taxonomy.'-'.$term->slug;
+		}
+		
+		// Post slug
 		$classes[] = $wp_query->post->post_name;
-
+		
 	endif;
 	return $classes;
+	
 } // new_body_classes()
 
 /*
