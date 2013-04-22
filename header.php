@@ -20,7 +20,7 @@
 
 	<link href="<?=WP_THEME_URL?>/style.css" rel="stylesheet" type="text/css" media="screen" />
 	<link href="<?=WP_THEME_URL?>/print.css" rel="stylesheet" type="text/css" media="print" />
-	<link href="<?=WP_THEME_URL?>/favicon.png" rel="icon" />
+	<link href="<?=WP_THEME_URL?>/favicon.ico" rel="icon" />
 	<link rel="alternate" type="application/rss+xml" title="<? bloginfo('name'); ?>" href="<? bloginfo('rss2_url'); ?>" />
 
 	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
