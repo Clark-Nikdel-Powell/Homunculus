@@ -54,28 +54,12 @@ header.site {
 	a {
 		display: block;
 	}
-<<<<<<< HEAD
 	ul ul {
 		display: none;
 	}
-	.current_page_item, .current_page_ancestor {
+	.current_page_item, .current_page_ancestor, .current-cat {
 		ul {display:block;}
 	}
-	.current_page_item > a {}
-=======
-	> ul { 
-		> .current_page_item, 								  //this little piggy went to market...
-		> .current_page_ancestor,  						 //this little piggy stayed home...
-		> .current-cat,										//this little piggy had roast beef...
-		> .current_page_ancestor .current_page_item //and this little piggy was a G*d*mn sub-sub nav item. Damn right you went weee weee weee all the way home.
-		{
-			> a {}
-			> .children {
-				display: block;
-			}			
-		}
-	}
->>>>>>> General Update
 }
 
 //  FOOTER  ////////////////////////////////////////////////////////////////
@@ -95,13 +79,3 @@ footer.site {
 #{$iconsprite} {background-image: url(images/sprite@2x.png); background-size: 200px 50px;}
 
 }
-
-<<<<<<< HEAD
-=======
-//  MOBILE  ////////////////////////////////////////////////////////////////
-
-/* ONLY USE THIS IF YOU HAVE A LOT OF DIFFERENCES BETWEEN DESKTOP AND TABLET. OTHERWISE, ADD TABLET STYLES INLINE
-@media ($tabletlg) { @import 'tablet'; }
-*/
-@media ($mobilelg) { @import 'responsive'; }
->>>>>>> General Update
