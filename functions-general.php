@@ -1,68 +1,10 @@
 <?
 
-if (!defined('WP_SITEURL')) { define('WP_SITEURL', get_bloginfo('url')); }
-
-$foldername = substr(strrchr(dirname(__FILE__), '/'), 1);
-define('WP_THEME_URL', WP_CONTENT_URL.'/themes/'.$foldername);
-
-/*
-===============================================================================
-
-  Modify the admin
-
-===============================================================================
-*/
-
-// Hide wordpress upgrade notice
-if (!current_user_can('update_core')) :
-	add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
-endif;
-
-add_action('admin_init', 'CNP_admin_init');
-function CNP_admin_init() {
-
-	// Remove unused boxes on the edit screens
-	//remove_post_type_support('post', 'author');
-	remove_post_type_support('page', 'author');
-	//remove_post_type_support('post', 'trackbacks');
-	remove_post_type_support('page', 'trackbacks');
-	//remove_post_type_support('post', 'comments');
-	remove_post_type_support('page', 'comments');
-
-} // CNP_admin_init()
-
-add_action('admin_menu', 'CNP_admin_menu', 999);
-function CNP_admin_menu() {
-	
-	// Remove menu links
-	remove_submenu_page('themes.php', 'theme-editor.php');
-	remove_submenu_page('plugins.php', 'plugin-editor.php');
-	remove_menu_page('link-manager.php');
-	
-	// Remove unused boxes on the edit screens
-	remove_meta_box('postcustom', 'post', 'normal');
-	remove_meta_box('postcustom', 'page', 'normal');
-	
-} //CNP_admin_menu()
-
 // Give editor role ability to edit widgets, menus, etc
 $role = get_role( 'editor' );
 if (!$role->capabilities['edit_theme_options']) :
 	$role->add_cap( 'edit_theme_options' );
 endif;
-
-// Remove comments column from page list
-add_filter('manage_pages_columns', 'custom_pages_columns');
-function custom_pages_columns($defaults) {
-  unset($defaults['comments']);
-  return $defaults;
-} // custom_pages_columns()
-
-// Widen date column
-add_action('admin_head', 'custom_columns_styles');
-function custom_columns_styles() {
-	echo PHP_EOL."<style type='text/css'>.fixed .column-date {width:13%;}</style>".PHP_EOL;
-} // custom_columns_styles()
 
 // Modify user profile fields
 add_filter('user_contactmethods', 'modify_contact_info');
@@ -77,22 +19,6 @@ function modify_contact_info($fields) {
 	return $fields;
 } // modify_contact_info()
 
-// Change admin footer credits
-add_filter('admin_footer_text', 'modify_footer_admin');
-function modify_footer_admin() {
-  print 'Created by <a href="http://clarknikdelpowell.com">Clark Nikdel Powell</a>. Powered by <a href="http://WordPress.org">WordPress</a>.';
-  print ' <a href="http://codex.wordpress.org/">Documentation</a> &bull; <a href="/wp-admin/freedoms.php">Freedoms</a> &bull; <a href="http://wordpress.org/support/forum/4">Feedback</a> &bull; <a href="/wp-admin/credits.php">Credits</a>';
-} // modify_footer_admin()
-
-// Remove admin bar on front-facing site
-add_filter( 'show_admin_bar', '__return_false' );
-
-// Add favicon to admin pages
-function pa_admin_area_favicon() {
-$favicon_url = get_bloginfo('template_directory') . '/favicon.png';
-echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
-}
-add_action('admin_head', 'pa_admin_area_favicon');
 
 /*
 ===============================================================================
