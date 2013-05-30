@@ -23,7 +23,28 @@
 	<link href="<?=WP_THEME_URL?>/favicon.ico" rel="icon" />
 	<link rel="alternate" type="application/rss+xml" title="<? bloginfo('name'); ?>" href="<? bloginfo('rss2_url'); ?>" />
 
-	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->'
+	
+	<script type="text/javascript">
+	var m = document.getElementsByTagName('meta');
+	var i;
+	if (navigator.userAgent.match(/iPhone/i) || (navigator.userAgent.match(/Android/i))) {
+		for (i=0; i<m.length; i++) {
+			if (m[i].name == "viewport") {
+				m[i].content = "initial-scale=1.0, width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+			}
+		}
+		document.addEventListener("gesturestart", gestureStart, false);
+	}
+	
+	function gestureStart() {
+		for (i=0; i<m.length; i++) {
+			if (m[i].name == "viewport") {
+				m[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+			}
+		}
+	}
+	</script>	
 	
 <? wp_head(); ?>
 
