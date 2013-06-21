@@ -13,12 +13,12 @@
 	<meta name="author"      content="Clark/Nikdel/Powell">
 	<meta name="description" content="<?= cnp_description(); ?>">
 
-	<link rel="stylesheet" href="<?=cnp_theme_url('style.css');?>" media="screen">
-	<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('ie.css');?>" media="screen"><![endif]-->
-	<link rel="stylesheet" href="<?=cnp_theme_url('print.css');?>" media="print">
+	<link rel="stylesheet" href="<?=cnp_theme_url('css/style.css');?>" media="screen">
+	<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('css/ie.css');?>" media="screen"><![endif]-->
+	<link rel="stylesheet" href="<?=cnp_theme_url('css/print.css');?>" media="print">
 
-	<link rel="icon" href="<?=cnp_theme_url('favicon.png');?>">
-	<link rel="alternate" type="application/rss+xml" title="<? bloginfo('name'); ?>" href="<? bloginfo('rss2_url'); ?>">
+	<link rel="icon" href="<?=cnp_theme_url('images/icons/favicon.png');?>">
+	<link rel="alternate" type="application/rss+xml" href="<?= esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))); ?>">
 
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	

@@ -3,11 +3,7 @@
 <footer class="site">
 </footer>
 
-<?
-wp_footer();
-get_template_part('scripts');
-?>
-
+<? wp_footer(); ?>
 </body>
 
 </html>
