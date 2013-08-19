@@ -1,9 +1,11 @@
+
 //  COLORS  ////////////////////////////////////////////////////////////////
 
 $twitter: #2AB6E9;
 $facebook: #3B5998;
 $linkedin: #0A7AB3;
 $youtube: #BD2F29;
+$instagram: #517FA3;
 $rss: #F79937;
 
 //  BREAK POINTS  ////////////////////////////////////////////////////////////////
@@ -13,66 +15,9 @@ $tabletsm: 'max-width:1000px';
 $mobilelg: 'max-width:700px';
 $mobilesm: 'max-width:450px';
 
-//  BROWSER PREFIXES  ////////////////////////////////////////////////////////////////
-
-@mixin cancel-gradient() {
-	background: transparent;
-	filter: none;
-}
-@mixin border-radius($v) {
-	-webkit-border-radius: $v;
-	-moz-border-radius:    $v;
-	border-radius:         $v;
-}
-@mixin box-sizing($v) {
-	-webkit-box-sizing: $v;
-	-moz-box-sizing:    $v;
-	-ms-box-sizing:     $v;
-	box-sizing:         $v;
-}
-@mixin box-shadow($v) {
-	-webkit-box-shadow: $v;
-	-moz-box-shadow:    $v;
-	box-shadow:         $v;
-}
-@mixin columns($c, $g) {
-	-webkit-column-count: $c;
-	-moz-column-count: $c;
-	column-count: $c;
-	-webkit-column-gap: $g;
-	-moz-column-gap: $g;
-	column-gap: $g;
-	
-	p, ul, ol, table {
-		-webkit-column-break-inside: avoid;
-		-moz-column-break-inside: avoid;
-		column-break-inside: avoid;
-	}
-}
-@mixin transition($v) {
-	-webkit-transition: unquote($v);
-	-moz-transition: unquote($v);
-	transition: unquote($v);
-}
-@mixin transform($v) {
-	-webkit-transform: unquote($v);
-	-moz-transform: unquote($v);
-	transform: unquote($v);
-}
-@mixin transform-origin($v) {
-	-webkit-transform-origin: unquote($v);
-	-moz-transform-origin: unquote($v);
-	transform-origin: unquote($v);
-}
-@mixin rgbabg($c, $o, $f:$c) {
-	background-color: $f;
-	background-color: rgba($c, $o);
-	*background-color: $f;
-}
-
 //  EXTEND BLOCKS  ////////////////////////////////////////////////////////////////
 
-%pseudo_triangle {
+%pseudo-triangle {
 	content: '';
 	display: block;
 	width: 0;
@@ -80,8 +25,8 @@ $mobilesm: 'max-width:450px';
 	position: absolute;
 	border: solid 10px transparent;
 }
-%inlineblock {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	::-moz-placeholder {@content}
+	:-ms-input-placeholder {@content}
 }
