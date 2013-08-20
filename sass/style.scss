@@ -1,71 +1,14 @@
-@import 'mixins', 'reset', 'content';
 
-//  LAYOUT  //////////////////////////////////////////////////////
+// Everyone needs these.
+@import 'variables', 'mixins', 'design', 'reset', 'reset-content';
 
-$cntrminwidth: 750px;
-$cntrmaxwidth: 1150px;
-$cntrpad: 20px;
+// Basics. Feel free to add more.
+@import 'layout';
+@import 'header', 'front-page', 'content', 'sidebar', 'footer';
+@import 'ie';
 
-.centered {
-	position: relative;
-	margin: 0 auto;
-	min-width: $cntrminwidth;
-	max-width: $cntrmaxwidth;
-	padding: 0 $cntrpad;
-}
-$iconsprite: '.iconsprite';
-#{$iconsprite} {background-image: url(images/sprite.png);}
+// Add page-specific imports here.
 
-//  HEADER  ////////////////////////////////////////////////////////////////
 
-header.site {
-}
-#logo {
-	width: 200px;
-	height: 100px;
-	
-	a {
-		display: block;
-		width: 100%;
-		height: 100%;
-		background-image: url(images/logo.png);
-		background-position: 50%;
-		text-indent: -9999px;
-	}
-}
-
-//  SUBNAV  ////////////////////////////////////////////////////////////////
-
-#subnav {
-	ul {
-		@extend .nobullets;
-	}
-	li {
-		padding: 0;
-	}
-	a {
-		display: block;
-	}
-
-	> ul { 
-		> .current_page_item, 								  //this little piggy went to market...
-		> .current_page_ancestor,  						 //this little piggy stayed home...
-		> .current-cat,										//this little piggy had roast beef...
-		> .current_page_ancestor .current_page_item //and this little piggy was a G*d*mn sub-sub nav item. Damn right you went weee weee weee all the way home.
-		{
-			> a {}
-			> .children {
-				display: block;
-			}			
-		}
-	}
-}
-
-//  FOOTER  ////////////////////////////////////////////////////////////////
-
-footer.site {
-}
-
-//  RESPONSIVE  ////////////////////////////////////////////////////////////////
-
+// Mobile devices.
 @import 'responsive';

@@ -1,4 +1,11 @@
 
+//  COMPASS  ////////////////////////////////////////////////////////////////
+
+@import 'compass/css3/', 'compass/support', 'compass/utilities/general/hacks';
+
+$legacy-support-for-ie: true;
+$legacy-support-for-ie6: false;
+
 //  COLORS  ////////////////////////////////////////////////////////////////
 
 $twitter: #2AB6E9;
