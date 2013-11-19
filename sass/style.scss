@@ -1,19 +1,15 @@
-/*!
-Theme Name:    COMPANY NAME
-Theme URI:     http://COMPANYWEBSITE.COM
-Description:   A custom theme built by <a href='http://www.clarknikdelpowell.com'>Clark/Nikdel/Powell Inc.</a> for COMPANY NAME
-Author:        YOUR NAME
-Author URI:    http://clarknikdelpowell.com
-*/
 
-@import 'mixins', 'reset', 'content';
+// Everyone needs these.
+@import 'variables', 'mixins', 'design', 'reset', 'reset-content';
 
-//  LAYOUT  //////////////////////////////////////////////////////
+// Basics. Feel free to add more.
+@import 'layout';
+@import 'header', 'front-page', 'content', 'sidebar', 'footer';
+@import 'ie';
 
-$cntrminwidth: 750px;
-$cntrmaxwidth: 1150px;
-$cntrpad: 20px;
+// Add page-specific imports here.
 
+<<<<<<< HEAD
 .centered {
 	position: relative;
 	margin: 0 auto;
@@ -68,8 +64,12 @@ footer.site {
 }
 
 //  RESPONSIVE  ////////////////////////////////////////////////////////////////
+=======
+>>>>>>> dev
 
+// Mobile devices.
 @import 'responsive';
+<<<<<<< HEAD
 
 //  HIDPI SCREENS  ////////////////////////////////////////////////////////////////
 
@@ -79,3 +79,5 @@ footer.site {
 #{$iconsprite} {background-image: url(images/sprite@2x.png); background-size: 200px 50px;}
 
 }
+=======
+>>>>>>> dev
