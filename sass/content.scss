@@ -1,27 +1,26 @@
-<<<<<<< HEAD
 @import 'design';
 
 //  CONTENT STYLES  ////////////////////////////////////////////////////////////////
 
 a, input[type=submit] {
 	@include transition('color 0.3s, background-color 0.3s, border-color 0.3s');
-	
+
 	&:hover { @include transition('color 0s, background-color 0s, border-color 0s'); }
 }
 a {
 	color: $linkcolor;
 	text-decoration: none;
-	
+
 	img {opacity:.95;}
 	&:hover {
 		color: $linkhovercolor;
-		
+
 		img {opacity:1;}
 	}
 }
 .ctst {
 	font-size: 1.15em;
-	
+
 	&, input, textarea, select {color:$copycolor;}
 	h1, h2, h3, h4, h5, h6 {
 		padding-top: 1.2em;
@@ -35,19 +34,19 @@ a {
 	h4 {font-size:1.2em; margin-bottom:-3px;}
 	h5 {font-size:1em; margin-bottom:-4px;}
 	h6 {font-size:1em; margin-bottom:-5px;}
-	
+
 	p, ul, ol, table {
 		line-height: 1.8em;
 		margin-top: 1.2em;
 	}
-	
+
 	ul, ol {margin-left: 1.7em;}
 	ul {list-style:disc;}
 	ol {list-style:decimal;}
 	ul ul, ul ol, ol ul, ol ol {margin-top:0;}
 	ul.nobullets, ol.nobullets {@extend %nobullets;}
 	li {padding:2px 0;}
-	
+
 	table {line-height:1.6em;}
 	th, td {
 		padding: 0.5em;
@@ -58,13 +57,13 @@ a {
 	.noborder th, .noborder td {border:0;}
 	table.layoutonly {
 		width: 100%;
-		
+
 		th, td {padding:0; border:0; vertical-align:top;}
 	}
-	
+
 	form {
 		padding-top: 0.6em;
-		
+
 		p, ul, ol, table {
 			margin-top: 0.7em;
 			line-height: 1.7em;
@@ -88,7 +87,7 @@ a {
 		text-transform: uppercase;
 		padding: $inputpad 0.9em;
 		line-height: 1em;
-		
+
 		&:hover {
 			background-color: $linkhovercolor;
 		}
@@ -98,12 +97,10 @@ a {
 	}
 	.home &, #sidebar {
 		font-size: 1em;
-		
+
 		p, ul, ol, table {
 			line-height: 1.6em;
 		}
 	}
 }
 %nobullets {list-style:none; margin-left:0;}
-=======
->>>>>>> dev

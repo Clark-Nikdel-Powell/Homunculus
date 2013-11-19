@@ -22,75 +22,12 @@ $tabletsm: 'max-width:1000px';
 $mobilelg: 'max-width:700px';
 $mobilesm: 'max-width:450px';
 
-<<<<<<< HEAD
-//  BROWSER PREFIXES  ////////////////////////////////////////////////////////////////
-
-@mixin linear-gradient($d, $g) {
-	background: $d;
-	background: -moz-linear-gradient(unquote($g));
-	background: -webkit-linear-gradient(unquote($g));
-	background: -o-linear-gradient(unquote($g));
-	background: -ms-linear-gradient(unquote($g));
-	background: linear-gradient(unquote($g));
-}
-
-@mixin cancel-gradient() {
-	background: transparent;
-	filter: none;
-}
-@mixin border-radius($v) {
-	-webkit-border-radius: $v;
-	-moz-border-radius:    $v;
-	border-radius:         $v;
-}
-@mixin box-sizing($v) {
-	-webkit-box-sizing: $v;
-	-moz-box-sizing:    $v;
-	-ms-box-sizing:     $v;
-	box-sizing:         $v;
-}
-@mixin box-shadow($v) {
-	-webkit-box-shadow: $v;
-	-moz-box-shadow:    $v;
-	box-shadow:         $v;
-}
-@mixin columns($c, $g) {
-	-webkit-column-count: $c;
-	-moz-column-count: $c;
-	column-count: $c;
-	-webkit-column-gap: $g;
-	-moz-column-gap: $g;
-	column-gap: $g;
-	
-	p, ul, ol, table {
-		-webkit-column-break-inside: avoid;
-		-moz-column-break-inside: avoid;
-		column-break-inside: avoid;
-	}
-}
-@mixin transition($v) {
-	-webkit-transition: unquote($v);
-	-moz-transition: unquote($v);
-	transition: unquote($v);
-}
-@mixin transform($v) {
-	-webkit-transform: unquote($v);
-	-moz-transform: unquote($v);
-	transform: unquote($v);
-}
-@mixin transform-origin($v) {
-	-webkit-transform-origin: unquote($v);
-	-moz-transform-origin: unquote($v);
-	transform-origin: unquote($v);
-}
 @mixin rgbabg($c, $o, $f:$c) {
 	background-color: $f;
 	background-color: rgba($c, $o);
 	*background-color: $f;
 }
 
-=======
->>>>>>> dev
 //  EXTEND BLOCKS  ////////////////////////////////////////////////////////////////
 
 %pseudo-triangle {

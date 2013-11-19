@@ -1,13 +1,8 @@
 %maintainfloat {overflow: hidden;}
 %table {display:table; width:100%;}
 %trow {display:table-row;}
-<<<<<<< HEAD
-%tcell {display:table-cell; vertical-align:middle; *display:inline; *zoom:1;}
 %font-smoothing {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing:grayscale;}
-=======
 %tcell {display:table-cell; vertical-align:middle;}
-%font-smoothing {-webkit-font-smoothing: antialiased;}
->>>>>>> dev
 %nowrap {white-space:nowrap;}
 
 *, *:before, *:after {margin:0px; padding:0px; outline:0; border:0px; background-repeat:no-repeat; @include box-sizing(border-box);}

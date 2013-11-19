@@ -1,11 +1,2 @@
-<<<<<<< HEAD
-
-=======
-/.sass-cache/
-/css/ie.css
-/css/print.css
-/css/style.css
-/css/tinymce.css
-/.DS_Store
->>>>>>> dev
-sass/.DS_Store
+.sass-cache
+css
