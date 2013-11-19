@@ -34,13 +34,19 @@
 	<h1 class="logo"><a href="<?=home_url()?>"><? bloginfo('name'); ?></a></h1>
 
 	<?
-	wp_nav_menu(array(
+	$find = array('><a','</a>','<li','</li');
+	$replace = array('','','<a','</a');
+
+	$menu = wp_nav_menu(array(
 		'menu'            => 'Main Menu'
 	,	'container'       => 'nav'
 	,	'container_class' => 'site'
 	,	'depth'           => 1
 	,	'fallback_cb'     => false
+	,	'items_wrap'      => '%3$s'
+	,	'echo'            => false
 	));
+	echo str_replace($find, $replace, $menu).PHP_EOL;
 	?>
 
 </header>
