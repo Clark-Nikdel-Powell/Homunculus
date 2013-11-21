@@ -14,7 +14,7 @@
 	<meta name="author"      content="Clark/Nikdel/Powell">
 	<meta name="description" content="<?= cnp_description(); ?>">
 
-	<link rel="stylesheet" href="<?=cnp_theme_url('css/style.css');?>" media="screen">
+	<link rel="stylesheet" href="<?=cnp_theme_url('css/styles.css');?>" media="screen">
 	<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('css/ie.css');?>" media="screen"><![endif]-->
 	<link rel="stylesheet" href="<?=cnp_theme_url('css/print.css');?>" media="print">
 
