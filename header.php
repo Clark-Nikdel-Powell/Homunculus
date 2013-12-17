@@ -15,8 +15,8 @@
 	<meta name="description" content="<?= cnp_description(); ?>">
 
 	<link rel="stylesheet" href="<?=cnp_theme_url('css/styles.css');?>" media="screen">
-	<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('css/ie.css');?>" media="screen"><![endif]-->
-	<link rel="stylesheet" href="<?=cnp_theme_url('css/print.css');?>" media="print">
+	<?/*<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('css/ie.css');?>" media="screen"><![endif]-->
+	<link rel="stylesheet" href="<?=cnp_theme_url('css/print.css');?>" media="print">*/?>
 
 	<link rel="icon" href="<?=cnp_theme_url('images/icons/favicon.png');?>">
 	<link rel="alternate" type="application/rss+xml" href="<?= esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))); ?>">
@@ -29,7 +29,7 @@
 
 <body <? cnp_schema_type('WebPage'); ?> <? body_class(); ?>>
 
-<header class="site" <? cnp_schema_type('WPHeader'); ?> role="banner">
+<header class="banner" <? cnp_schema_type('WPHeader'); ?> role="banner">
 
 	<h1 class="logo"><a href="<?=home_url()?>"><? bloginfo('name'); ?></a></h1>
 

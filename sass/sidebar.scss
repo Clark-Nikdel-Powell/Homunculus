@@ -1,9 +1,7 @@
 
 .subnav {
 	ul {@extend %nostyle-list;}
-	a {
-		display: block;
-	}
+	a {display: block;}
 	ul ul {display: none;}
 
 	.current_page_item, .current_page_ancestor, .current-cat, .current_page_ancestor .current_page_item {

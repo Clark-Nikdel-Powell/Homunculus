@@ -1,14 +1,9 @@
+/*
+** Cornerstone
+*/
+@import 'cornerstone/cornerstone';
 
-// Everyone needs these.
-@import 'variables', 'mixins', 'design', 'reset', 'reset-content';
-
-// Basics. Feel free to add more.
-@import 'layout';
-@import 'header', 'front-page', 'content', 'sidebar', 'footer';
-@import 'ie';
-
-// Add page-specific imports here.
-
-
-// Mobile devices.
-@import 'responsive';
+/*
+** This site
+*/
+@import 'sidebar';
