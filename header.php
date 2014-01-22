@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<!--[if IE 7]>         <html class="ie ie7 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="ie ie8 lt-ie9">        <![endif]-->
-<!--[if IE 9]>         <html class="ie ie9">               <![endif]-->
-<!--[if gt IE 9]><!--> <html>                              <!--<![endif]-->
+<!doctype html>
+<!--[if lt IE 9]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
 <head>
 
 	<meta charset="<? bloginfo('charset'); ?>">
