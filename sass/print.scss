@@ -1,8 +1,3 @@
-@import 'mixins', 'reset', 'content';
 
-#header, #sidebar, #footer {
-	display: none;
-}
-
-//  LAYOUT  //////////////////////////////////////////////////////
-
+@import 'cornerstone/cornerstone';
+// Probably want to include any other content styles here
