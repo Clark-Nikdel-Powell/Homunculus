@@ -9,15 +9,15 @@
 	<title><? wp_title('&lsaquo;', true, 'right'); ?></title>
 
 	<meta name="viewport"    content="width=device-width,initial-scale=1,maximum-scale=1">
-	<meta name="author"      content="Clark/Nikdel/Powell">
-	<meta name="description" content="<?= cnp_description(); ?>">
+	<meta name="author"      content="<? global $post; echo get_the_author_meta('display_name', $post->post_author); ?>">
+	<meta name="description" content="<?= cnp_description() ?>">
 
-	<link rel="stylesheet" href="<?=cnp_theme_url('css/styles.css');?>" media="screen">
+	<link rel="stylesheet" href="<?= cnp_theme_url('css/styles.css') ?>" media="screen">
 	<?/*<!--[if IE]><link rel="stylesheet" href="<?=cnp_theme_url('css/ie.css');?>" media="screen"><![endif]-->
 	<link rel="stylesheet" href="<?=cnp_theme_url('css/print.css');?>" media="print">*/?>
 
-	<link rel="icon" href="<?=cnp_theme_url('img/fav.ico');?>">
-	<link rel="alternate" type="application/rss+xml" href="<?= esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))); ?>">
+	<link rel="icon" href="<?= cnp_theme_url('img/fav.ico') ?>">
+	<link rel="alternate" type="application/rss+xml" href="<?= esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))) ?>">
 
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
