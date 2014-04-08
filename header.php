@@ -29,7 +29,10 @@
 
 <header class="banner" <? cnp_schema_type('WPHeader'); ?> role="banner">
 
-	<a class="logo" href="<?=home_url()?>"><? bloginfo('name'); ?></a>
+	<h2 class="logo" <? cnp_schema_type('Organization'); ?>>
+		<a itemprop="url" href="<?= home_url() ?>"><? bloginfo('name'); ?></a>
+		<meta itemprop="logo" content="<?= cnp_theme_url('img/logo.svg') ?>">
+	</h2>
 
 	<?
 	$find = array('><a','</a>','<li','</li');
