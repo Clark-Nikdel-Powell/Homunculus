@@ -29,7 +29,7 @@
 
 <header class="banner" <? cnp_schema_type('WPHeader'); ?> role="banner">
 
-	<h1 class="logo"><a href="<?=home_url()?>"><? bloginfo('name'); ?></a></h1>
+	<a class="logo" href="<?=home_url()?>"><? bloginfo('name'); ?></a>
 
 	<?
 	$find = array('><a','</a>','<li','</li');
