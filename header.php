@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if lt IE 9]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+<!--[if lt IE 9]>      <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" <? cnp_schema_type('Product'); ?>> <!--<![endif]-->
 <head>
 
 	<meta charset="<? bloginfo('charset'); ?>">
