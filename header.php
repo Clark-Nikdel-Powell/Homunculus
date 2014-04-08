@@ -34,20 +34,6 @@
 		<meta itemprop="logo" content="<?= cnp_theme_url('img/logo.svg') ?>">
 	</h2>
 
-	<?
-	$find = array('><a','</a>','<li','</li');
-	$replace = array('','','<a','</a');
-
-	$menu = wp_nav_menu(array(
-		'menu'            => 'Main Menu'
-	,	'container'       => 'nav'
-	,	'container_class' => 'site'
-	,	'depth'           => 1
-	,	'fallback_cb'     => false
-	,	'items_wrap'      => '%3$s'
-	,	'echo'            => false
-	));
-	echo str_replace($find, $replace, $menu).PHP_EOL;
-	?>
+	<? cnp_nav_menu('Main'); ?>
 
 </header>
