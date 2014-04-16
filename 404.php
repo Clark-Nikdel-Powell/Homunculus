@@ -1,5 +1,5 @@
 <?
-get_header();
+get_header('int');
 ?>
 
 <div id="content" class="ctst">
@@ -18,5 +18,5 @@ get_header();
 </div><!-- content -->
 
 <?
-get_footer();
+get_footer('int');
 ?>
