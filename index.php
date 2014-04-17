@@ -1,23 +1,21 @@
 <?
 get_header('int');
-if ( is_search() ) {$type = 'search';}
-else {$type = $post->post_type;}
 
 if (have_posts()) { while (have_posts()) { the_post(); ?>
 
-	<div <? post_class(); ?>>
+	<article <? post_class(); ?>>
 
-		<? get_template_part('content', $type); ?>
+		<? get_template_part('content', $post->post_type); ?>
 
-	</div>
+	</article>
 
 <? } pagination('&larr; Back', 'More &rarr;'); } else { ?>
 
-	<div class="hentry">
+	<article class="hentry">
 
 		<p class="summary">There is nothing in this section right now. Check back later for updates!</p>
 
-	</div>
+	</article>
 
 <?
 }

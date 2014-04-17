@@ -1,4 +1,6 @@
 <?
+get_header('int');
+
 $ancestor = highest_ancestor();
 $s        = get_query_var('s');
 $key      = esc_html($s, 1);
@@ -49,3 +51,5 @@ $key      = esc_html($s, 1);
 	<p><? print $excerpt; ?></p>
 
 </div><!-- post_class -->
+
+<? get_footer('int'); ?>

@@ -1,22 +1,15 @@
-<?
-get_header('int');
-?>
 
-<div id="content" class="ctst">
+<? get_header('int'); ?>
 
-	<div class="hentry">
+<article class="hentry">
 
-		<div class="postdata">
-			<h1>Page Not Found</h1>
-		</div><!-- postdata -->
+	<div class="postdata">
+		<h1>Page Not Found</h1>
+	</div><!-- postdata -->
 
-		<p class="summary">We're sorry, but the page you are looking for does not exist. Perhaps searching the site would help.</p>
-		<? get_search_form(); ?>
+	<p class="summary">We're sorry, but the page you are looking for does not exist. Perhaps searching the site would help.</p>
+	<? get_search_form(); ?>
 
-	</div><!-- hentry -->
+</article><!-- hentry -->
 
-</div><!-- content -->
-
-<?
-get_footer('int');
-?>
+<? get_footer('int'); ?>
