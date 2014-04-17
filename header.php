@@ -27,7 +27,7 @@
 
 <body <? cnp_schema_type('WebPage'); ?> <? body_class(); ?>>
 
-<header class="banner" <? cnp_schema_type('WPHeader'); ?> role="banner">
+<header class="masthead" <? cnp_schema_type('WPHeader'); ?> role="banner">
 
 	<h2 class="logo" <? cnp_schema_type('Organization'); ?>>
 		<a itemprop="url" href="<?= home_url() ?>"><? bloginfo('name'); ?></a>
