@@ -1,5 +1,5 @@
-.sass-cache
-css
-.DS_Store
+*.sass-cache
+*.DS_Store
+*.css
 
-/sass/cornerstone
+/css/pre/cornerstone
