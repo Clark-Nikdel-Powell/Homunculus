@@ -2,8 +2,14 @@
 <? if (highest_ancestor('return=name') != $post->post_title) { ?>
 <div class="postdata">
 	<h1><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h1>
-	<? if ($post->post_type == 'post') { ?>
-	<p class="meta">Posted on <? the_time('F j, Y'); ?> in <? the_category(', '); ?></p>
+	<? if (!is_post_type_hierarchical($post->post_type)) { ?>
+	<p class="meta">
+		Posted on <? the_time('F j, Y'); ?>
+		<? if ($post->post_type == 'post') {
+			echo 'in ';
+			the_category(', ');
+		} ?>
+	</p>
 	<? } ?>
 </div><!-- postdata -->
 <? } ?>
