@@ -1,7 +1,7 @@
 
 <div id="sidebar" class="ctst">
 
-	<?= ($subnav = cnp_subnav() ? $subnav : '') ?>
+	<? if ($subnav = cnp_subnav()) echo $subnav; ?>
 
 	<?
 	$catid = get_cat_id('news');
