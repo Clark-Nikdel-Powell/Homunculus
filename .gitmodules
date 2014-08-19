@@ -1,0 +1,3 @@
+[submodule "css/pre/cornerstone"]
+	path = css/pre/cornerstone
+	url = https://github.com/Clark-Nikdel-Powell/Cornerstone.git
