@@ -12,10 +12,6 @@
 	<meta name="author"      content="<?php global $post; echo get_the_author_meta('display_name', $post->post_author); ?>">
 	<meta name="description" content="<?php cnp_description(); ?>">
 
-	<link rel="stylesheet" href="<?php echo cnp_theme_url('css/styles.css'); ?>" media="screen">
-	<?/*<!--[if IE]><link rel="stylesheet" href="<?php cnp_theme_url('css/ie.css'); ?>" media="screen"><![endif]-->
-	<link rel="stylesheet" href="<?php cnp_theme_url('css/print.css'); ?>" media="print">*/?>
-
 	<link rel="icon" href="<?php echo cnp_theme_url('img/fav.ico'); ?>">
 	<link rel="alternate" type="application/rss+xml" href="<?php esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))); ?>">
 
