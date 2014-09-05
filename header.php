@@ -12,7 +12,6 @@
 	<meta name="author"      content="<?php global $post; echo get_the_author_meta('display_name', $post->post_author); ?>">
 	<meta name="description" content="<?php cnp_description(); ?>">
 
-	<link rel="icon" href="<?php echo cnp_theme_url('img/fav.ico'); ?>">
 	<link rel="alternate" type="application/rss+xml" href="<?php esc_attr(get_option('rss_url', get_bloginfo('rss2_url'))); ?>">
 
 	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
