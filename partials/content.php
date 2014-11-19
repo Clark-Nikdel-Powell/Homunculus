@@ -1,6 +1,7 @@
 <?php
 
-cnp_postdata_header($post);
+global $ClientCore;
+$ClientCore->do->post_header($post);
 
 // Post body
 if (is_singular()) {
