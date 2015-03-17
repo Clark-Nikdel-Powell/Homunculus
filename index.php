@@ -13,7 +13,7 @@ if (have_posts()) { while (have_posts()) { the_post(); ?>
 
 	</article>
 
-<?php } pagination('&larr; Back', 'More &rarr;'); } else { ?>
+<?php } pagination( array('prev_text'=>'&larr; Back', 'next_text'=>'More &rarr;') ); } else { ?>
 
 	<article class="hentry">
 		<?php
